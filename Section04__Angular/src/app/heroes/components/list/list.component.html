@@ -1,0 +1,32 @@
+<div class="w-100 h-100">
+
+  <div class="position-relative">
+    <div *ngIf="confirmation && deletedHero !== undefined" class="alert alert-danger position-absolute top-0 end-0 me-1"
+      role="alert">
+      <b>{{ deletedHero }}</b> has been deleted!
+    </div>
+
+    <div *ngIf="confirmation && deletedHero == undefined" class="alert alert-danger position-absolute top-0 end-0 me-1"
+      role="alert">
+      <b>There aren't heroes to delete!</b>
+    </div>
+
+
+    <div class="mt-5">
+      <div class="d-flex justify-content-center">
+        <div class="card mx-4" style="width: 18rem;">
+          <h3 class="text-center">List of Heroes</h3>
+          <ul class="list-group list-group-flush" *ngFor="let heroe of listHeroes">
+            <li class="list-group-item"> {{ heroe }}</li>
+          </ul>
+          <div class="d-flex justify-content-center my-2">
+            <button (click)="deleteHero()" class="btn btn-danger"> Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
