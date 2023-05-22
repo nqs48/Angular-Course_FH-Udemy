@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div>
+    <h1>
+      Directiva estructural *ngIf - Sintaxis completa
+    </h1>
+    
+    <!-- Directiva If -->
+    <div>
+      <h2 *ngIf="true">Todos los precios se encuentran rebajados 50% !!</h2>
+    </div>
+    
+    <!-- Directiva If Else -->
+    <div>
+      <h2 *ngIf="!true; else elseTemplate">Todos los precios se encuentaran rebajados al 50% !!</h2>
+    </div>
+    
+    <ng-template #elseTemplate>
+      <h2>Todos los precios se encuentran rebajados al 20%</h2>
+    </ng-template>
+    
+    <!-- Directiva ngIf Then Else -->
+    
+    <div>
+      <h1 *ngIf="!true; then ifTemplate else elseTemplateTwo"></h1>
+    
+      <ng-template #ifTemplate>
+        <h1>Todos los precios se encuentran rebajados 75% !!</h1>
+      </ng-template>
+    
+      <ng-template #elseTemplateTwo>
+        <h1>Todos los precios se encuentran rebajados 100% !!</h1>
+      </ng-template>
+    
+    </div>
+
+    <!-- Directiva [ngIf]  [ngIfElse] -->
+
+    <ng-template [ngIf]="!true" [ngIfElse]="templateNgIfElse">
+      <h2>No hay ningun descuento</h2>
+    </ng-template>
+
+    <ng-template #templateNgIfElse>
+      <h2>Hay un descuento del 10%</h2>
+    </ng-template>
+
+
+  </div>
+ 
+</div>
+
+
+
+
+
