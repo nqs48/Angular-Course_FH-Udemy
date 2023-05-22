@@ -1,33 +1,37 @@
+<div class="d-flex justify-content-center">
+  <div>
+    <h1>{{ name }}</h1>
 
-<div class="container ">
 
-<h1>{{ name }}</h1>
+    <dl>
+      <td>Nombre: </td>
+      <dd> {{ name }} </dd>
 
+      <td>Edad: </td>
+      <dd> {{ age }} </dd>
 
-<dl>
-  <td>Nombre: </td>
-  <dd> {{ name }} </dd>
+      <td>Metodo: </td>
+      <dd> {{ getCompleteName() }} </dd>
 
-  <td>Edad: </td>
-  <dd> {{ age }} </dd>
+      <td>Capitalizado: </td>
+      <dd> {{ CapitalizedName }} </dd>
 
-  <td>Metodo: </td>
-  <dd> {{ getCompleteName() }} </dd>
+    </dl>
 
-  <td>Capitalizado: </td>
-  <dd> {{ CapitalizedName }} </dd>
+    <button *ngIf="name === 'Nestea'" (click)="changeHeroName()" class="btn btn-primary me-2">
+      Cambiar Nombre
+    </button>
 
-</dl>
+    <button *ngIf="age === 45" (click)="changeHeroAge()" class="btn btn-success">
+      Cambiar Edad
+    </button>
 
-<button *ngIf="name === 'Nestea'" (click)="changeHeroName()" class="btn btn-primary me-2">
-  Cambiar Nombre
-</button>
+    <button *ngIf="name !== 'Nestea' && age !== 45" (click)="reiniciar()" class="btn btn-success">
+      Reiniciar
+    </button>
 
-<button *ngIf="age === 45" (click)="changeHeroAge()" class="btn btn-success">
-  Cambiar Edad
-</button>
+  </div>
 
 
 
 </div>
-

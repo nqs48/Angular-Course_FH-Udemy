@@ -3,11 +3,13 @@ import { CommonModule } from "@angular/common";
 
 import { HeroComponent } from "./components/hero/hero.component";
 import { ListComponent } from "./components/list/list.component";
+import { HeroesComponent } from "./heroes.component";
 
 
 
 @NgModule({
   declarations: [
+    HeroesComponent,
     HeroComponent,
     ListComponent
   ],

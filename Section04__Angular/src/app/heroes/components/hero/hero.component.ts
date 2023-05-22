@@ -28,4 +28,9 @@ export class HeroComponent {
     this.age= this.age === 45 ? 27 : 45;
   }
 
+  reiniciar(): void {
+    this.age = 45;
+    this.name = "Nestea";
+  }
+
 }

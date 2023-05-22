@@ -4,12 +4,14 @@ import { Component } from '@angular/core';
 @Component({
   selector:'app-counter',
   template: `
-    <h2>Contador: {{ counter }}</h2>
+  <div class="d-flex justify-content-center">
     <div>
+      <h2>Contador: {{ counter }}</h2>
       <button (click)="disminuir()" style = "padding: 1rem; background-color: cadetblue ;" > -</button>
       <button (click)="aumentar($event)" style = "padding: 1rem; background-color: aquamarine; margin: 0.3rem;" > +</button>
       <button (click)="reiniciar()"> Limpiar </button>
-    </div>`
+    </div>
+  </div>`
 
 })
 export class CounterComponent{
